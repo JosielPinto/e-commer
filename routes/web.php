@@ -1,6 +1,8 @@
 <?php
 
+use App\Mail\ContactanosMailable;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +33,11 @@ Route::post('/clear', 'App\Http\Controllers\CartController@clear')->name('cart.c
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/factura', Function (){
+    $correo = new ContactanosMailable;
+
+    Mail::to('josielpinto16@gmail.com')->send($correo);
+
+    return "Mensaje Enviado";
+});
