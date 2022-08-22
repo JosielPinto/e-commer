@@ -16,6 +16,19 @@
                         <h4>Productos Disponibles en la Tienda</h4>
                     </div>
                 </div>
+                <div class="row card-body">
+                    <div class="col-lg-7">
+                        <h5>Categorias</h5>
+                        <select name="categorias" class="form-select">
+                            <option>Todos los productos</option>
+                            <option value="1">Laptos</option>
+                            <option value="2">Telefonos</option>
+                            <option value="3">Audifonos</option>
+                            <option value="4">Televisores</option>
+                            <option value="5">Camaras</option>
+                        </select>
+                    </div>
+                </div>
                 <hr>
                 <div class="row">
                     @foreach($products as $pro)
@@ -39,9 +52,15 @@
                                         <input type="hidden" value="1" id="quantity" name="quantity">
                                         <div class="card-footer" style="background-color: white;">
                                               <div class="row">
+                                                @guest
+                                                @if (Route::has('login'))
+                                                    <p><FONT COLOR="red">Registrese y Comprer !</FONT></p>
+                                                @endif
+                                                @else
                                                 <button class="btn btn-secondary btn-sm" class="tooltip-test" title="add to cart">
                                                     <i class="fa fa-shopping-cart"></i> Añadir a Carrito
                                                 </button>
+                                                @endguest
                                             </div>
                                         </div>
                                     </form>

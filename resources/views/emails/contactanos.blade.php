@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Correo Electronico</h1>
-    <p>Este es el Informe de Compra!</p>
+    <h1>Correo Factura</h1>
+    <p>Este es el Informe de Compra Exitosa!</p>
 </body>
 </html>

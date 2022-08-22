@@ -31,13 +31,14 @@ Route::post('/update', 'App\Http\Controllers\CartController@update')->name('cart
 Route::post('/remove', 'App\Http\Controllers\CartController@remove')->name('cart.remove');
 Route::post('/clear', 'App\Http\Controllers\CartController@clear')->name('cart.clear');
 
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/factura', Function (){
+
     $correo = new ContactanosMailable;
 
     Mail::to('josielpinto16@gmail.com')->send($correo);
 
     return "Mensaje Enviado";
+
 });
