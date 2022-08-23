@@ -6,6 +6,6 @@ npm install && npm run dev.
 
 composer install.
 
-
+uso de DarrylCode/laravel .
 
 
